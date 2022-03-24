@@ -18,6 +18,21 @@ for i in range(str_len-1,-1,-1):
 print()
 #3
 print("3번")
+url = "http://sharebook.kr"
+url_len = len(url)
+search_str = input("문자열 입력: ")
+index = url.rfind(search_str)
+if(index != -1):
+    print(f'{search_str}의 index는 url[{index}]입니다.')
+    print(url[index:url_len])
+    #kr만 뽑아서 출력
+    index = url.find("kr")    
+    domain = url[index:index+2]
+    print(domain)
+else:
+    print(f'"{search_str}"이 없습니다.')
+"""
+3번 잘못된 
 url = input("문자열 입력: ")
 index = url.rfind("kr")
 if(index != -1):
@@ -26,7 +41,7 @@ if(index != -1):
     print(domain)
 else:
     print("kr이 없습니다.")
-
+"""
 
 print()
 #4
